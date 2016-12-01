@@ -8,8 +8,8 @@
   {
     "name": "Prueba hecha por Jorge",
     "database": "mongo",
-    "description": "Consulta de prueba.",
-    "query": "db.mensajes.find().pretty()"
+    "description": "Consulta de prueba",
+    "query": "mensajes.find().pretty()"
   },
   {
   "name": "ASDASDASDASDASD",
