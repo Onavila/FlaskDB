@@ -3,7 +3,7 @@
     "name": "Mensajes emitidos por un usuario de la red social.",
     "database": "mongo",
     "description": "Esta consulta entrega todos los mensajes que fueron emitidos por un usuario.",
-    "query": "usuarios.find({\"id\":\"id_persona\"},{})"
+    "query": "usuarios.find({\"id\":int(User_id)},{})"
   },
   {
     "name": "Prueba hecha por Jorge",

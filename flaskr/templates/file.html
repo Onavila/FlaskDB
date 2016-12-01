@@ -17,7 +17,9 @@
         </div>
         <div class="mdl-card__supporting-text mdl-card--border">
           {% if name == "Mensajes emitidos por un usuario de la red social." %}
-            <form><input type="text" name="id_persona" placeholder="Id de la persona"></form>
+            <form action="localhost/mongo">
+              <input type="text" name="id_persona" placeholder="Id de la persona">
+            </form>
             <br>
             Filtro por ubicación:
             <form><input type="text" name="latitud" placeholder="Latitud"></form>
