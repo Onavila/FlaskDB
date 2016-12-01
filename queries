@@ -6,6 +6,12 @@
     "query": "usuarios.find({\"id\":\"id_persona\"},{})"
   },
   {
+    "name": "Busqueda por texto",
+    "database": "mongo",
+    "description": "Consulta de prueba",
+    "query": "usuarios.find({\"id\":\"ide\"},{})"
+  },
+  {
     "name": "Prueba hecha por Jorge",
     "database": "mongo",
     "description": "Consulta de prueba",

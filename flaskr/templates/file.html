@@ -46,6 +46,13 @@
             <form><input type="text" name="ide" placeholder="Id de la persona"></form>
           {% endif %}
 
+          {% if name == "Busqueda por texto" %}
+            <form><input type="text" name="frases_definitivas" placeholder="Frases que deben estar"></form>
+            <form><input type="text" name="frases_tentativas" placeholder="Frases que se desean"></form>
+            <form><input type="text" name="frases_prohibidas" placeholder="Frases que NO deben estar"></form>
+          {% endif %}
+
+
 
           <div class="query-card-content">
             <span>
