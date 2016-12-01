@@ -75,5 +75,13 @@ def example():
     return render_template('example.html')
 
 
+@app.route("/leaflet")
+def leaflet():
+
+
+    return render_template("leaflet.html")
+
+
+
 if __name__ == "__main__":
     app.run()
