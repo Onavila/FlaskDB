@@ -16,9 +16,9 @@
           </button>
         </div>
         <div class="mdl-card__supporting-text mdl-card--border">
-          <form>
-	    <input type="text">
-          </form>
+          {% if name == "Mensajes emitidos por un usuario de la red social." %}
+            <form><input type="text"></form>
+          {% endif %}
           <div class="query-card-content">
             <span>
               {{description}}
