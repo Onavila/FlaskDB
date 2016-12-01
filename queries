@@ -15,7 +15,7 @@
     "name": "Prueba hecha por Jorge",
     "database": "mongo",
     "description": "Consulta de prueba",
-    "query": "usuarios.find({\"id\":\"ide\"},{})"
+    "query": "usuarios.find({\'id\':int(ide)})"
   },
   {
   "name": "Mensajes intercambiados entre usuarios.",
