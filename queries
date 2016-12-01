@@ -6,10 +6,10 @@
     "query": "usuarios.find()"
   },
   {
-    "name": "Test2 22222",
+    "name": "Prueba hecha por Jorge",
     "database": "mongo",
     "description": "Consulta de prueba.",
-    "query": "usuarios.find().pretty()"
+    "query": "db.usuarios.find().pretty()"
   },
   {
   "name": "ASDASDASDASDASD",
