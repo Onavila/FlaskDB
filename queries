@@ -3,16 +3,16 @@
     "name": "Mensajes emitidos por un usuario de la red social.",
     "database": "mongo",
     "description": "Esta consulta entrega todos los mensajes que fueron emitidos por un usuario.",
-    "query": "usuarios.find({\"_id\":\"id_persona\"},{})"
+    "query": "usuarios.find({\"id\":\"id_persona\"},{})"
   },
   {
     "name": "Prueba hecha por Jorge",
     "database": "mongo",
     "description": "Consulta de prueba",
-    "query": "usuarios.find({\"_id\":\"ide\"},{})"
+    "query": "usuarios.find({\"id\":\"ide\"},{})"
   },
   {
-  "name": "Mensajes intercambiados entre usuarios",
+  "name": "Mensajes intercambiados entre usuarios.",
   "database": "mongo",
   "description":
   "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
