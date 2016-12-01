@@ -12,10 +12,16 @@
 <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 <script type="text/javascript">
 
-	var map = L.map("map").setView([38.7964062, -95.4801544], 4);
+	var map = L.map("map").setView([51.505, -0.09], 13);
 	var osm	= "http://{s}.title.osm.org/{z}/{x}/{y}.png";
+	var osm2 = "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
+    			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, idmagery © <a href="http://mapbox.com">Mapbox</a>',
+    			maxZoom: 18,
+    			id: 'your.mapbox.project.id',
+    			accessToken: 'your.mapbox.public.access.token'
+				}
 
-	L.tileLayer(osm).addTo(map);
+	L.tileLayer(osm2).addTo(map);
 
 </script>
 </body>
