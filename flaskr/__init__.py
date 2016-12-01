@@ -52,7 +52,7 @@ def home():
 @app.route("/mongo")
 def mongo():
     query = request.args.get("query")
-    results = eval('db.'+query)
+    results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
         return render_template('mongo.html', results=results)
@@ -72,7 +72,7 @@ def postgres():
 
 @app.route("/example")
 def example():
-    return render_template('example.html')
+    return render_template('layout.html')
 
 
 if __name__ == "__main__":
