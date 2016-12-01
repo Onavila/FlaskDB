@@ -72,7 +72,7 @@ def postgres():
 
 @app.route("/example")
 def example():
-    return render_template('layout.html')
+    return render_template('example.html')
 
 
 if __name__ == "__main__":
