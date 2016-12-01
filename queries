@@ -1,9 +1,15 @@
 [
   {
-    "name": "Seleccionar todo",
-    "database": "postgres",
-    "description": "Una muy breve descripción",
-    "query": "SELECT * FROM mytable;"
+    "name": "Mensajes emitidos por un usuario de la red social.",
+    "database": "mongo",
+    "description": "Esta consulta entrega todos los mensajes que fueron emitidos por un usuario.",
+    "query": "usuarios.find()"
+  },
+  {
+    "name": "Test2",
+    "database": "mongo",
+    "description": "Consulta de prueba.",
+    "query": "usuarios.find().pretty()"
   },
   {
   "name": "Lorem ipsum dolor sit amet",
