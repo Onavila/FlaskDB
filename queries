@@ -9,7 +9,7 @@
     "name": "Prueba hecha por Jorge",
     "database": "mongo",
     "description": "Consulta de prueba.",
-    "query": "test.usuarios.find().pretty()"
+    "query": "db.mensajes.find().pretty()"
   },
   {
   "name": "ASDASDASDASDASD",
