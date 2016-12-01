@@ -12,7 +12,7 @@
     "query": "usuarios.find().pretty()"
   },
   {
-  "name": "Lorem ipsum dolor sit amet",
+  "name": "ASDASDASDASDASD",
   "database": "mongo",
   "description":
   "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
