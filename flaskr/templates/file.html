@@ -18,12 +18,35 @@
         <div class="mdl-card__supporting-text mdl-card--border">
           {% if name == "Mensajes emitidos por un usuario de la red social." %}
             <form><input type="text" name="id_persona" placeholder="Id de la persona"></form>
+            <br>
+            Filtro por ubicación:
+            <form><input type="text" name="latitud" placeholder="Latitud"></form>
+            <form><input type="text" name="longitud" placeholder="Longitud"></form>
+            <br>
+            Filtro por fecha:
+            <form><input type="date" name="fecha_inicial"></form>
+            <form><input type="date" name="fecha_final"></form>
+
           {% endif %}
           {% if name == "ASDASDASDASDASD" %}
-          <form><input type="text" name="id_1" placeholder="placehold"></form>
-          <form><input type="text" name="id_2" placeholder="placehold2"></form>
-          <form><input type="date" name="fecha" placeholder="placehold3"></form>
+          <form><input type="text" name="id_1" placeholder="Id persona 1"></form>
+          <form><input type="text" name="id_2" placeholder="Id persona 2"></form>
+          <form><input type="date" name="fecha"></form>
+          <br>
+            Filtro por ubicación:
+            <form><input type="text" name="latitud_e" placeholder="Latitud"></form>
+            <form><input type="text" name="longitud_e" placeholder="Longitud"></form>
+            <br>
+            Filtro por fecha:
+            <form><input type="date" name="fecha_inicial_e"></form>
+            <form><input type="date" name="fecha_final_e"></form>
           {% endif %}
+
+          {% if name == "Prueba hecha por Jorge" %}
+            <form><input type="text" name="ide" placeholder="Id de la persona"></form>
+          {% endif %}
+
+
           <div class="query-card-content">
             <span>
               {{description}}
