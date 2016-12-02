@@ -3,9 +3,6 @@
 {% block content %}
   <div class="main-container">
     <div class="container">
-      <form action="." method="POST">
-        <input type="text" name="user_id" placeholder="algo">
-      </form>
       {% for name, db, description, query in results %}
       {% set algomuysucio = 'onClickQuery("{}","{}")'.format(db, query) %}
       <div class="query-card mdl-shadow--2dp">
@@ -20,8 +17,16 @@
         <div class="mdl-card__supporting-text mdl-card--border">
           {% if name == "Busqueda de mensajes"%}
           <form action="." method="POST">
-            <input type="text" name="user_id" placeholder="algo">
+            <input type="text" name="user_id" placeholder="Id sender">
+            <input type="text" name="receptant_id" placeholder="Id receptant">
+            <input type="date" name="start_date" placeholder="YYYY-MM-DD">
+            <input type="date" name="end_date" placeholder="YYYY-MM-DD">
+            <input type="text" name="min_lat" placeholder="Latitud mínima">
+            <input type="text" name="max_lat" placeholder="Latitud máxima">
+            <input type="text" name="min_lon" placeholder="Longitud mínima">
+            <input type="text" name="max_lon" placeholder="Longitud máxima">
           </form>
+          <br>
           {% endif %}
           <div class="query-card-content">
             <span>
