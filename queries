@@ -8,7 +8,7 @@
   {
     "name": "Busqueda de mensajes",
     "database": "mongo",
-    "description": "La funcion busca los mensajes emitidos por un usuario en base a su id. La busqueda se puede filtrar de acuerdo a los demas campos propuesto (todos opcionales).",
+    "description": "La función busca los mensajes emitidos por un usuario en base a su id. La búsqueda se puede filtrar de acuerdo a los demas campos propuestos (todos opcionales).",
     "query": "messages.find({'sender': user_id, 'receptant': receptant_id, 'date':{'$gte': 'start_date', '$lte': 'end_date'}, 'lat':{'$gte': min_lat, '$lte': max_lat}, 'long':{'$gte': min_lon, '$lte': max_lon} })"
   },
   {
