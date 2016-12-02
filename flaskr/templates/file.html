@@ -15,6 +15,18 @@
           </button>
         </div>
         <div class="mdl-card__supporting-text mdl-card--border">
+          {% if name == "Busqueda por texto"%}
+          <form class="" action="index.html" method="post">
+            Frases que aparezcan:<br>
+            <textarea name="must_search" rows="4" cols="60"></textarea>
+            <br>
+            Frases que quiza aparezcan:<br>
+            <textarea name="maybe_search" rows="4" cols="60"></textarea>
+            <br>
+            Frases que no aparezcan:<br>
+            <textarea name="not_search" rows="4" cols="60"></textarea>
+          </form>
+          {% endif %}
           {% if name == "Usuarios" %}
           <form action="." method="post">
             Id del usuario:<br>

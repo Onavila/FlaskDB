@@ -16,6 +16,10 @@ $(document).ready(function(){
       var db = $(this).prev()[0].textContent.split('-')[0].trim();
       var query = $(this).parent().parent().find(".query-card-code > span")[0].textContent;
       var data = $(this).parent().parent().find("form").find("input");
+      var data2 = $(this).parent().parent().find("form").find("textarea");
+      if ($(this).parent().parent().find("form").has("textarea")) {
+
+      }
       if (data[0].name == "id_del_usuario") {
         query = query.replace("user_id",data[0].value);
       }

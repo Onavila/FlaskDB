@@ -12,9 +12,9 @@
     "query": "messages.find({'sender': user_id, 'receptant': receptant_id, 'date':{'$gte': 'start_date', '$lte': 'end_date'}, 'lat':{'$gte': min_lat, '$lte': max_lat}, 'long':{'$gte': min_lon, '$lte': max_lon} })"
   },
   {
-    "name": "Quiero todo de mongo 😄",
+    "name": "Busqueda por texto",
     "database": "mongo",
-    "description": "...",
-    "query": "myCollection.find()"
+    "description": "La consulta entrega los mensajes de acuerdo a los filtros pedidos",
+    "query": "messages.find({$text:{$search:'search_string'})"
   }
 ]
