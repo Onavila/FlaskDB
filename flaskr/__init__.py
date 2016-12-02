@@ -52,6 +52,8 @@ def home():
 @app.route("/mongo")
 def mongo():
     query = request.args.get("query")
+    id = request.args.get("user_id")
+    query = "mensajes.find()"
     results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:

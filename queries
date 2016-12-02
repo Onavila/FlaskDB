@@ -3,11 +3,7 @@
     "name": "Mensajes emitidos",
     "database": "mongo",
     "description": "Esta consulta entrega todos los mensajes que fueron emitidos por un usuario.",
-<<<<<<< HEAD
-    "query": "mensajes.find({\"id\":int(user_id)},{})"
-=======
-    "query": "mensajes.find({\"id\":int(User_id)},{})"
->>>>>>> 161adc5748cbee3d4fafad5af3c4cae509d0ff4b
+    "query": "mensajes.find({\"id\":int(%User_id%)},{})"
   },
   {
     "name": "Mensajes emitidos por un usuario de la red social.",
