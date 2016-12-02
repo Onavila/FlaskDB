@@ -52,3 +52,12 @@ $(document).ready(function(){
       window.location.assign(location.href+db+'?query='+query);
   });
 });
+
+function Navbar() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
