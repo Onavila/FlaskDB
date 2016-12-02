@@ -17,7 +17,7 @@ def create_app():
 app = create_app()
 
 # REPLACE WITH YOUR DATABASE NAME
-MONGODATABASE = "myDatabase"
+MONGODATABASE = "test"
 MONGOSERVER = "localhost"
 MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
@@ -52,6 +52,7 @@ def home():
 @app.route("/mongo")
 def mongo():
     query = request.args.get("query")
+<<<<<<< HEAD
     if 'user_id' in query:
         print(request.form.get('user_id'))
         query = query.replace("user_id", "1")
@@ -59,6 +60,10 @@ def mongo():
     if str(request.form.get("user_id")) == "2":
         query = query.replace("user_id", "3")
         pass
+=======
+    id = request.args.get("user_id")
+    query = "mensajes.find()"
+>>>>>>> master
     results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:
@@ -80,6 +85,14 @@ def postgres():
 @app.route("/example")
 def example():
     return render_template('example.html')
+
+
+@app.route("/leaflet")
+def leaflet():
+
+
+    return render_template("leaflet.html")
+
 
 
 if __name__ == "__main__":
