@@ -17,8 +17,8 @@
         </div>
         <div class="mdl-card__supporting-text mdl-card--border">
           {% if name == "Mensajes emitidos" %}
-          <form>
-	    <input name="user_id" type="text" placeholder="Id de la persona" >
+          <form action="/mongo" method="post">
+	    <input id="user_id" name="user_id" type="text" placeholder="Id de la persona" >
           </form>
           {% endif %}
           {% if name == "Mensajes emitidos por un usuario de la red social." %}
