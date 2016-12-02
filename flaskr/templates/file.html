@@ -16,6 +16,11 @@
           </button>
         </div>
         <div class="mdl-card__supporting-text mdl-card--border">
+          {% if name == "Mensajes emitidos" %}
+          <form>
+	    <input name="user_id" type="text" placeholder="Id de la persona" >
+          </form>
+          {% endif %}
           {% if name == "Mensajes emitidos por un usuario de la red social." %}
             <form action="localhost/mongo">
               <input type="text" name="id_persona" placeholder="Id de la persona">
@@ -42,10 +47,6 @@
             Filtro por fecha:
             <form><input type="date" name="fecha_inicial_e"></form>
             <form><input type="date" name="fecha_final_e"></form>
-          {% endif %}
-
-          {% if name == "Prueba hecha por Jorge" %}
-            <form><input type="text" name="ide" placeholder="Id de la persona"></form>
           {% endif %}
 
           {% if name == "Busqueda por texto" %}
