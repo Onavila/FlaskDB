@@ -17,13 +17,18 @@
         <div class="mdl-card__supporting-text mdl-card--border">
           {% if name == "Busqueda de mensajes"%}
           <form action="." method="POST">
-            <input type="text" name="user_id" placeholder="Id sender">
-            <input type="text" name="receptant_id" placeholder="Id receptant">
-            <input type="date" name="start_date" placeholder="YYYY-MM-DD">
-            <input type="date" name="end_date" placeholder="YYYY-MM-DD">
-            <input type="text" name="min_lat" placeholder="Latitud mínima">
-            <input type="text" name="max_lat" placeholder="Latitud máxima">
-            <input type="text" name="min_lon" placeholder="Longitud mínima">
+            Usuario que envia los mensajes:<br>
+            <input type="text" name="user_id" placeholder="Id sender"><br>
+            Usuario que recive los mensajes:<br>
+            <input type="text" name="receptant_id" placeholder="Id receptant"><br>
+            Fecha más temprana de los mensajes:<br>
+            <input type="date" name="start_date" placeholder="YYYY-MM-DD"><br>
+            Fecha más tardia de los mensajes:<br>
+            <input type="date" name="end_date" placeholder="YYYY-MM-DD"><br>
+            ubicación de los mensajes:<br>
+            <input type="text" name="min_lat" placeholder="Latitud mínima"><br>
+            <input type="text" name="max_lat" placeholder="Latitud máxima"><br>
+            <input type="text" name="min_lon" placeholder="Longitud mínima"><br>
             <input type="text" name="max_lon" placeholder="Longitud máxima">
           </form>
           <br>
