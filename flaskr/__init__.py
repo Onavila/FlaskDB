@@ -52,6 +52,13 @@ def home():
 @app.route("/mongo")
 def mongo():
     query = request.args.get("query")
+    if 'user_id' in query:
+        print(request.form.get('user_id'))
+        query = query.replace("user_id", "1")
+        pass
+    if str(request.form.get("user_id")) == "2":
+        query = query.replace("user_id", "3")
+        pass
     results = eval('mongodb.'+query)
     results = json_util.dumps(results, sort_keys=True, indent=4)
     if "find" in query:

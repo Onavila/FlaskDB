@@ -1,9 +1,9 @@
 [
   {
-    "name": "Seleccionar todo",
-    "database": "postgres",
+    "name": "Busqueda de mensajes",
+    "database": "mongo",
     "description": "Una muy breve descripción",
-    "query": "SELECT * FROM mytable;"
+    "query": "messages.find({'sender': user_id })"
   },
   {
   "name": "Lorem ipsum dolor sit amet",

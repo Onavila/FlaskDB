@@ -3,9 +3,11 @@
 {% block content %}
   <div class="main-container">
     <div class="container">
+      <form action="." method="POST">
+        <input type="text" name="user_id" placeholder="algo">
+      </form>
       {% for name, db, description, query in results %}
       {% set algomuysucio = 'onClickQuery("{}","{}")'.format(db, query) %}
-
       <div class="query-card mdl-shadow--2dp">
         <div class="mdl-card__title">
           <h6>{{db}} - {{name}}</h6>
@@ -16,6 +18,11 @@
           </button>
         </div>
         <div class="mdl-card__supporting-text mdl-card--border">
+          {% if name == "Busqueda de mensajes"%}
+          <form action="." method="POST">
+            <input type="text" name="user_id" placeholder="algo">
+          </form>
+          {% endif %}
           <div class="query-card-content">
             <span>
               {{description}}
