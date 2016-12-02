@@ -1,27 +1,20 @@
 [
   {
+    "name": "Usuarios",
+    "database": "mongo",
+    "description": "La consulta entrega los datos de un usuario en la base de datos.",
+    "query": "users.find({'id': user_id})"
+  },
+  {
     "name": "Busqueda de mensajes",
     "database": "mongo",
     "description": "La funcion busca los mensajes emitidos por un usuario en base a su id. La busqueda se puede filtrar de acuerdo a los demas campos propuesto (todos opcionales).",
     "query": "messages.find({'sender': user_id, 'receptant': receptant_id, 'date':{'$gte': 'start_date', '$lte': 'end_date'}, 'lat':{'$gte': min_lat, '$lte': max_lat}, 'long':{'$gte': min_lon, '$lte': max_lon} })"
   },
   {
-    "name": "Sebastián",
-    "database": "postgres",
-    "description": "Una consulta de Sebastián 🙋",
-    "query": "SELECT * FROM mytable WHERE nombre='Sebastián';"
-  },
-  {
     "name": "Quiero todo de mongo 😄",
     "database": "mongo",
     "description": "...",
     "query": "myCollection.find()"
-  },
-  {
-    "name": "Insertar a mongo",
-    "database": "mongo",
-    "description":
-      "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-    "query": "myCollection.insert( { \"attribute\": \"value\" } )"
   }
 ]

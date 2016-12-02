@@ -15,6 +15,12 @@
           </button>
         </div>
         <div class="mdl-card__supporting-text mdl-card--border">
+          {% if name == "Usuarios" %}
+          <form action="." method="post">
+            Id del usuario:<br>
+            <input type="text" name="id_del_usuario" placeholder="Id del usuario">
+          </form>
+          {% endif %}
           {% if name == "Busqueda de mensajes"%}
           <form action="." method="POST">
             Usuario que envia los mensajes:<br>
