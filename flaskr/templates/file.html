@@ -5,7 +5,6 @@
     <div class="container">
       {% for name, db, description, query in results %}
       {% set algomuysucio = 'onClickQuery("{}","{}")'.format(db, query) %}
-
       <div class="query-card mdl-shadow--2dp">
         <div class="mdl-card__title">
           <h6>{{db}} - {{name}}</h6>
@@ -16,49 +15,42 @@
           </button>
         </div>
         <div class="mdl-card__supporting-text mdl-card--border">
-          {% if name == "Mensajes emitidos" %}
-          <form action="/mongo" method="post">
-	    <input id="user_id" name="user_id" type="text" placeholder="Id de la persona" >
+          {% if name == "Busqueda por texto"%}
+          <form class="" action="index.html" method="post">
+            Frases que aparezcan:<br>
+            <textarea name="must_search" rows="4" cols="60"></textarea>
+            <br>
+            Frases que quizás aparezcan:<br>
+            <textarea name="maybe_search" rows="4" cols="60"></textarea>
+            <br>
+            Frases que no aparezcan:<br>
+            <textarea name="not_search" rows="4" cols="60"></textarea>
           </form>
           {% endif %}
-          {% if name == "Mensajes emitidos por un usuario de la red social." %}
-            <form action="localhost/mongo">
-              <input type="text" name="id_persona" placeholder="Id de la persona">
-            </form>
-            <br>
-            Filtro por ubicación:
-            <form><input type="text" name="latitud" placeholder="Latitud"></form>
-            <form><input type="text" name="longitud" placeholder="Longitud"></form>
-            <br>
-            Filtro por fecha:
-            <form><input type="date" name="fecha_inicial"></form>
-            <form><input type="date" name="fecha_final"></form>
+          {% if name == "Usuarios" %}
+          <form action="." method="post">
+            Id del usuario:<br>
+            <input type="text" name="id_del_usuario" placeholder="Id del usuario">
+          </form>
           {% endif %}
-
-          {% if name == "Mensajes intercambiados entre usuarios." %}
-          <form><input type="text" name="id_1" placeholder="Id persona 1"></form>
-          <form><input type="text" name="id_2" placeholder="Id persona 2"></form>
-          <form><input type="date" name="fecha"></form>
+          {% if name == "Busqueda de mensajes"%}
+          <form action="." method="POST">
+            Usuario 1:<br>
+            <input type="text" name="user_id" placeholder="Id usuario 1"><br>
+            Usuario 2:<br>
+            <input type="text" name="receptant_id" placeholder="Id usuario 2"><br>
+            Fecha más temprana de los mensajes:<br>
+            <input type="date" name="start_date" placeholder="YYYY-MM-DD"><br>
+            Fecha más tardía de los mensajes:<br>
+            <input type="date" name="end_date" placeholder="YYYY-MM-DD"><br>
+            Ubicación de los mensajes:<br>
+            <input type="text" name="min_lat" placeholder="Latitud mínima"><br>
+            <input type="text" name="max_lat" placeholder="Latitud máxima"><br>
+            <input type="text" name="min_lon" placeholder="Longitud mínima"><br>
+            <input type="text" name="max_lon" placeholder="Longitud máxima">
+          </form>
           <br>
-            Filtro por ubicación:
-            <form><input type="text" name="latitud_e" placeholder="Latitud"></form>
-            <form><input type="text" name="longitud_e" placeholder="Longitud"></form>
-            <br>
-            Filtro por fecha:
-            <form><input type="date" name="fecha_inicial_e"></form>
-            <form><input type="date" name="fecha_final_e"></form>
           {% endif %}
-
-          {% if name == "Busqueda por texto" %}
-            <form><input type="text" name="frases_definitivas" placeholder="Frases que deben estar"></form>
-            <br>
-            <form><input type="text" name="frases_tentativas" placeholder="Frases que se desean"></form>
-            <br>
-            <form><input type="text" name="frases_prohibidas" placeholder="Frases que NO deben estar"></form>
-          {% endif %}
-
-
-
           <div class="query-card-content">
             <span>
               {{description}}

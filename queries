@@ -1,43 +1,21 @@
 [
   {
-    "name": "Mensajes emitidos",
+    "name": "Usuarios",
     "database": "mongo",
-    "description": "Esta consulta entrega todos los mensajes que fueron emitidos por un usuario.",
-    "query": "mensajes.find({\"id\":int(%User_id%)},{})"
+    "description": "La consulta entrega los datos de un usuario en la base de datos.",
+    "query": "users.find({'id': user_id})"
   },
   {
-    "name": "Mensajes emitidos por un usuario de la red social.",
+    "name": "Busqueda de mensajes",
     "database": "mongo",
-    "description": "Esta consulta entrega todos los mensajes que fueron emitidos por un usuario.",
-    "query": "mensajes.find({\"id\":int(User_id)},{})"
+    "description": "La funcion busca los mensajes emitidos por un usuario en base a su id. La busqueda se puede filtrar de acuerdo a los demas campos propuesto (todos opcionales, incluyendo usuario 2).",
+    "query": "messages.find({'sender': user_id, 'receptant': receptant_id, 'date':{'$gte': 'start_date', '$lte': 'end_date'}, 'lat':{'$gte': min_lat, '$lte': max_lat}, 'long':{'$gte': min_lon, '$lte': max_lon} })"
   },
   {
     "name": "Busqueda por texto",
     "database": "mongo",
-    "description": "Consulta de prueba",
-    "query": "usuarios.find({\"id\":\"ide\"},{})"
-  },
-  {
-  "name": "Mensajes intercambiados entre usuarios.",
-  "database": "mongo",
-  "description":
-  "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-  "query": "mensajes.find( {\"attribute\": \"value\"} )"
-  },
-
-  {
-    "name": "Insertar a mongo",
-    "database": "mongo",
-    "description":
-      "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-    "query": "myCollection.insert( { \"attribute\": \"value\" } )"
-  },
-
-  {
-    "name": "Seguimiento de localización: Leafleftf",
-    "database": "mongo",
-    "description":
-      "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-    "query": "myCollection.insert( { \"attribute\": \"value\" } )"
+    "description": "La consulta entrega los mensajes de acuerdo a los filtros pedidos",
+    "query": "messages.find({$text:{$search:'search_string'})"
   }
+
 ]
