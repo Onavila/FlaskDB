@@ -20,7 +20,7 @@
             Frases que aparezcan:<br>
             <textarea name="must_search" rows="4" cols="60"></textarea>
             <br>
-            Frases que quiza aparezcan:<br>
+            Frases que quizás aparezcan:<br>
             <textarea name="maybe_search" rows="4" cols="60"></textarea>
             <br>
             Frases que no aparezcan:<br>
@@ -35,15 +35,15 @@
           {% endif %}
           {% if name == "Busqueda de mensajes"%}
           <form action="." method="POST">
-            Usuario que envia los mensajes:<br>
+            Usuario que envía los mensajes:<br>
             <input type="text" name="user_id" placeholder="Id sender"><br>
-            Usuario que recive los mensajes:<br>
+            Usuario que recibe los mensajes:<br>
             <input type="text" name="receptant_id" placeholder="Id receptant"><br>
             Fecha más temprana de los mensajes:<br>
             <input type="date" name="start_date" placeholder="YYYY-MM-DD"><br>
-            Fecha más tardia de los mensajes:<br>
+            Fecha más tardía de los mensajes:<br>
             <input type="date" name="end_date" placeholder="YYYY-MM-DD"><br>
-            ubicación de los mensajes:<br>
+            Ubicación de los mensajes:<br>
             <input type="text" name="min_lat" placeholder="Latitud mínima"><br>
             <input type="text" name="max_lat" placeholder="Latitud máxima"><br>
             <input type="text" name="min_lon" placeholder="Longitud mínima"><br>
